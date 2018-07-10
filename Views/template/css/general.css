@@ -20,3 +20,11 @@ footer {
 	height: 50px;
 	width: 50px;
 }
+.panel-heading{
+	height: 40px;
+	line-height: 18px;
+}
+.panel-heading a{
+	font-size: 30px;
+	text-decoration: none;
+}

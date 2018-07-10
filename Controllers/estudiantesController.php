@@ -35,7 +35,8 @@
 					$this->estudiante->set("imagen", $nombre);
 					$this->estudiante->set("id_seccion", $_POST['id_seccion']);
 					$this->estudiante->add();
-					header("Location: " . URL . "estudiantes");
+					print_r($_FILES['imagen']['type']);
+					// header("Location: " . URL . "estudiantes");
 				}
 			}		
 		}

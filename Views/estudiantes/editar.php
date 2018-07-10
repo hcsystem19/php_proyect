@@ -3,7 +3,12 @@
 <h3 class="titulo">Editar Estudiante <?php echo $datos['nombre'];?></h3>
 	<div class="panel panel-success">
 		<div class="panel-heading">
-			<h3 class="panel-title">Editar estudiante <?php echo $datos['nombre'];?></h3>
+			<div class="pull-left">
+				<h3 class="panel-title">Editar estudiante <?php echo $datos['nombre'];?></h3>
+			</div>
+			<div class="pull-right">
+				<a href="<?php echo URL;?>" aria-hidden="true">&times;</a>
+			</div>
 		</div>
 		<div class="panel-body">
 			<div class="row">
@@ -29,17 +34,17 @@
 							<input class="form-control" value="<?php echo $datos['promedio'];?>" name="promedio" type="number" required>
 						</div>
 						<div class="form-group">
-							<label for="inputEmail" class="control-label">Seccion (<b>Seccion actual: <?php echo $datos['nombre_seccion'];?></b>)</label>
+							<label for="inputEmail" class="control-label">Seccion</label>
+							
 							<select name="id_seccion" class="form-control">
 								<?php while($row = mysqli_fetch_array($secciones)){ ?>
-									<option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+									<option value="<?php echo $row['id']; ?>" <?php if($datos['id_seccion'] == $row['id']){ echo " selected";} ?>><?php echo $row['nombre']; ?></option>
 								<?php } ?>
 							</select>
 						</div>
 						<input value="<?php echo $datos['id'];?>" name="id" type="hidden" required>
-						<div class="form-group">
+						<div class="form-group"> 
 							<button type="submit" class="btn btn-success">Editar</button>
-							<button type="reset" class="btn btn-warning">Borrar</button>
 						</div>
 					</form>
 				</div>
