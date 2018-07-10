@@ -32,11 +32,11 @@
 				$ver = mysqli_fetch_assoc($_FILES);
 				print_r($ver);
 
-				/*if (in_array($_FILES['imagen']['type'], $permitidos)){
+				if (in_array($_FILES['imagen']['type'], $permitidos)){
 						print "Esta funcionando";
 				}else{
 					print "Error!";
-				}*/
+				}
 			}		
 		}
 	}
