@@ -8,7 +8,7 @@
 			<div class="row">
 				<div class="col-md-1"></div>
 				<div class="col-md-10">
-					<form class="form-horizontal" action="" method="POST" enctype="multipart/from-data">
+					<form class="form-horizontal" action="" method="POST" enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="inputEmail" class="control-label">Nombre</label>
 							<input class="form-control" name="nombre" type="text" required>
