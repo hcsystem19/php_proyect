@@ -17,4 +17,7 @@ if ($result->num_rows > 0) {
     echo "0 results";
 }
 $mysqli->close();
+
+$ip_actual = $_SERVER['REMOTE_ADDR'];
+print_r($ip_actual);
 ?>
